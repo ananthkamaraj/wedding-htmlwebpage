@@ -1,0 +1,307 @@
+<!-- BEGIN HTML -->
+<!DOCTYPE html>
+<html lang="en">
+    <!-- BEGIN HEAD -->
+    <head>
+        <!-- BEGIN TITLE -->
+        <title>Festive - Responsive Wedding HTML5 & Bootstrap5 Template</title>
+        <!-- END TITLE -->
+        
+         <!-- BEGIN META -->
+         <meta charset="UTF-8">
+         <meta http-equiv="X-UA-Compatible" content="IE=edge">
+         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <!-- END META -->
+
+         <!-- BEGIN FAVICON -->
+         <link rel="icon" type="image/x-icon" href="images/favicon/01.ico">
+         <!-- END FAVICON -->
+
+        <!-- BEGIN CSS LINKS -->
+          <!-- Font Awesome 6-->
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+          <!-- Bootstrap 5 CSS-->
+          <link rel="stylesheet" href="css/bootstrap5.css">
+          <!-- Animate CSS -->
+          <link rel="stylesheet" href="css/animate.css">
+          <!-- Uikit -->
+          <link rel="stylesheet" href="css/uikit.css">
+          <!-- Custom CSS -->
+          <link rel="stylesheet" href="css/style.css">
+        <!-- BEGIN CSS LINKS -->
+    </head>
+    <!-- END HEAD -->
+
+    <!-- BEGIN BODY -->
+    <body>
+      <!-- BEGIN HEADER -->
+      <nav class="navbar header navbar-expand-lg navbar-dark fixed-top pt-4 pb-3" id="header">
+          <div class="container">
+            <a class="navbar-brand" href="index.html">
+              <img src="images/header/01.png" alt="Logo" class="img-fluid logo" id="logo">
+          </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation" id="navbarToggler">
+              <i class="fa fa-bars"></i>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+              <ul class="navbar-nav mx-auto">
+                <li class="nav-item">
+                  <a href="index.html" class="nav-link header-link" id="headerLink2" aria-current="page">Home</a>
+                </li>
+
+                <li class="nav-item">
+                  <a href="story.html" class="nav-link header-link" id="headerLink4">Story</a>
+                </li>
+
+                <li class="nav-item">
+                  <a href="wedding.html" class="nav-link header-link" id="headerLink3">Wedding</a>
+                </li>
+
+                <li class="nav-item">
+                  <a href="gallery.html" class="nav-link active header-link header-link-active" id="headerLinkactive">Gallery</a>
+                </li>
+
+                <li class="nav-item">
+                  <a href="gift.html" class="nav-link header-link" id="headerLink5">Gift</a>
+                </li>
+
+                <li class="nav-item">
+                  <a href="rsvp.html" class="nav-link header-link" id="headerLink6">RSVP</a>
+                </li>
+
+              </ul>
+            </div>
+
+          </div>
+      </nav>
+      <!-- END HEADER -->
+
+      <!-- BEGIN SLIDER -->
+      <div class="text-center">
+        <div class="gallery-main-bg">
+          <div class="gallery-main-bg-overlay">
+            <h2 class="all-bg-header">Our Gallery</h2>
+          </div>
+        </div>
+      </div>
+      <!-- END SLIDER -->
+
+      <!-- BEGIN GALLERY SECTION -->
+      <div class="container padding-container text-center" id="gallerySection">
+        <h2 class="all-title">Our Gallery</h2>
+        <p class="all-subtitle">Suspendisse nec dui ut turpis posuere sagittis <br> viverra tincidunt lectus. Sed faucibus tristique purus, ac mattis lorem malesuada vel. Sed dignissim,</p>
+
+        <div class="uk-section" uk-filter="target: .gallery">
+          <ul class="uk-subnav uk-subnav-pill">
+          <li class="uk-active" uk-filter-control><a  href="#" class="gallery-title">All</a></li>
+          <li uk-filter-control="[data-category='pre-wedding']"><a  href="#" class="gallery-title">Pre Wedding</a></li>
+          <li uk-filter-control="[data-category='engagement']"><a  href="#" class="gallery-title">Engagement</a></li>
+          <li uk-filter-control="[data-category='parties']"><a  href="#" class="gallery-title">Parties</a></li>
+          </ul>
+          <div class="gallery gallery-animation uk-child-width-1-3" uk-grid uk-lightbox data-animation="fadeInUp">
+            <div data-category="engagement">
+              <a href="images/gallery/02.jpeg" class="gallery-main">
+                <i class="fa-solid fa-plus gallery-icon"></i>
+                <img src="images/gallery/02.jpeg" class="gallery-img">
+              </a>
+            </div>
+
+            <div data-category="engagement">  
+              <a href="images/gallery/03.jpeg" class="gallery-main">
+                <i class="fa-solid fa-plus gallery-icon"></i>
+                <img src="images/gallery/03.jpeg" class="gallery-img">
+              </a>
+            </div>
+
+            <div data-category="pre-wedding">
+              <a href="images/gallery/04.jpeg" class="gallery-main">
+                <i class="fa-solid fa-plus gallery-icon"></i>
+                <img src="images/gallery/04.jpeg" class="gallery-img">
+              </a>
+            </div>
+            <div data-category="pre-wedding">
+              <a href="images/gallery/05.jpeg" class="gallery-main">
+                <i class="fa-solid fa-plus gallery-icon"></i>
+                <img src="images/gallery/05.jpeg" class="gallery-img">
+              </a>
+            </div>
+            <div data-category="engagement">
+              <a href="images/gallery/06.jpeg" class="gallery-main">
+                <i class="fa-solid fa-plus gallery-icon"></i>
+                <img src="images/gallery/06.jpeg" class="gallery-img">
+              </a>
+            </div>
+            <div data-category="parties">
+              <a href="images/gallery/07.jpeg" class="gallery-main">
+                <i class="fa-solid fa-plus gallery-icon"></i>
+                <img src="images/gallery/07.jpeg" class="gallery-img">
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- END GALLERY SECTION -->
+
+      <div class="padding-container"></div>
+
+      <!-- BEGIN FOOTER SECTION -->
+      <footer>
+        <div class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-sm-6 col-md-12 col-lg-3">
+                        <a href="#" class="footer-logo">Festive.</a>
+                        <p class="footer-description">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took</p>
+
+                        <ul class="social-icon-ul footer-social-icons">
+                            <li class="social-icon-li"><a href="#" class="social-icon-link text-center">
+                                  <div class="box">
+                                      <span></span>
+                                      <span></span>
+                                  </div>
+                                  <div class="box">
+                                        <span><i class="fab fa-facebook-f card-social-icon" aria-hidden="true"></i></span>
+                                        <span><i class="fab fa-facebook-f card-social-icon"></i></span>
+                                  </div>
+                                </a>
+                            </li>
+                            <li class="social-icon-li"><a href="#" class="social-icon-link text-center">
+                                    <div class="box">
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                                    <div class="box">
+                                        <span><i class="fab fa-instagram card-social-icon" aria-hidden="true"></i></span>
+                                        <span><i class="fab fa-instagram card-social-icon" aria-hidden="true"></i></span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="social-icon-li"><a href="#" class="social-icon-link text-center">
+                                    <div class="box">
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                                    <div class="box">
+                                        <span><i class="fab fa-twitter card-social-icon" aria-hidden="true"></i></span>
+                                        <span><i class="fab fa-twitter card-social-icon" aria-hidden="true"></i></span>
+                                    </div>
+                                </a>
+                            </li>
+      
+                            <li class="social-icon-li"><a href="#" class="social-icon-link text-center">
+                                    <div class="box">
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                                    <div class="box">
+                                        <span><i class="fab fa-pinterest-p card-social-icon" aria-hidden="true"></i></span>
+                                        <span><i class="fab fa-pinterest-p card-social-icon" aria-hidden="true"></i></span>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-12 col-sm-6 col-md-12 col-lg-3 pt-1">
+                        <h4 class="footer-links-title">Quick Links</h4>
+
+                        <ul class="footer-link-ul">
+                            <li class="footer-link-li">
+                                <a href="#" class="footer-link"> - Tour</a>
+                            </li>
+
+                            <li class="footer-link-li">
+                                <a href="#" class="footer-link"> - Wellness</a>
+                            </li>
+
+                            <li class="footer-link-li">
+                                <a href="#" class="footer-link"> - Vintge stores</a>
+                            </li>
+
+                            <li class="footer-link-li">
+                                <a href="#" class="footer-link"> - Trekking</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-12 col-sm-6 col-md-12 col-lg-3 pt-1">
+                        <h4 class="footer-links-title">Links</h4>
+
+                        <ul class="footer-link-ul">
+                            <li class="footer-link-li">
+                                <a href="#" class="footer-link"> - Home</a>
+                            </li>
+
+                            <li class="footer-link-li">
+                                <a href="#" class="footer-link"> - Groom & Bride</a>
+                            </li>
+
+                            <li class="footer-link-li">
+                                <a href="#" class="footer-link"> - Story</a>
+                            </li>
+
+                            <li class="footer-link-li">
+                                <a href="#" class="footer-link"> - RSVP</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-12 col-sm-6 col-md-12 col-lg-3 pt-1">
+                        <h4 class="footer-links-title">Have a Questions?</h4>
+
+                        <ul class="footer-link-ul">
+                            <li class="footer-link-li">
+                                <i class="fa-solid fa-location-dot"></i> 203 Fake St. Mountain View, San Francisco, California, USA
+                            </li>
+
+                            <li class="footer-link-li">
+                                <a href="#" class="footer-link"><i class="fa-solid fa-phone"></i> +2 392 3929 210</a>
+                            </li>
+
+                            <li class="footer-link-li">
+                                <a href="#" class="footer-link"><i class="fa-solid fa-envelope"></i> info@yourdomain.com</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <p class="footer-p">This template is made with <i class="fa-solid fa-heart"></i> by <a href="#" class="footer-link"> - platinum_themes.</a></p>
+            </div>
+        </div>
+      </footer>
+      <!-- END FOOTER SECTION -->
+
+      <!-- BEGIN IMAGE FOOTER SECTION -->
+      <footer>
+        <div class="footer-background text-center">
+            <div class="footer-bg-overlay">
+                <h1 class="slider-name">Thank You</h1>
+                <p class="footer-code">Francisco & Laura</p>
+            </div>
+        </div>
+      </footer>
+      <!-- END IMAGE FOOTER SECTION -->
+
+      <!-- BEGIN BACK TO TOP BUTTON -->
+      <button id="backToTop" class="btn btn-dark back-to-top" role="button"><i class="fa-solid fa-arrow-up"></i></button>
+      <!-- END BACK TO TOP BUTTON -->
+  </body>
+  <!-- END BODY -->
+
+  <!-- BEGIN SCRIPT -->
+      <!-- jQuery v3.6.0 Script-->
+      <script type="text/javascript" src="js/jquery.js"></script>
+      <!-- Uikit Script -->
+      <script type="text/javascript" src="js/uikit.js"></script>
+      <!-- Waypoint Script for scroll animation-->
+      <script type="text/javascript" src="js/waypoint.js"></script>
+      <!-- Bootstrap 5 Script-->
+      <script type="text/javascript" src="js/bootstrap5.js"></script>
+      <!-- Custom Script -->
+      <script type="text/javascript" src="js/script.js"></script>
+  <!-- END SCRIPT -->
+
+</html>
+<!-- END HTML -->

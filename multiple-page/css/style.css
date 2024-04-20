@@ -1,0 +1,1646 @@
+/*----------------------------------------------------------------------
+
+Theme Name :  Festive - Responsive Wedding HTML5 & Bootstrap5 Template
+Version    :  1.0.0
+Author     :  platinum_themes
+URL        :  https://themeforest.net/user/platinum_themes
+
+------------------------------------------------------------------------*/
+
+/* --------------------------------------------------------------
+
+>>> TABLE OF CONTENTS:
+
+01. Theme Main Resoursce
+    01.1. Google Fonts
+    01.2. Theme Reset Style
+    01.3. Header
+    01.4. Main Footer
+    01.5. Image Footer
+    01.6. Back to top button
+    01.7. Tablet Responsive
+    01.8. Mobile Responsive
+
+02. Home Page & Wedding Page Common File
+    02.1. Couples Section
+    02.2. Groomsmen & Bridesmaid Section
+
+03. Home Page
+    03.1. Slider
+    03.2. Save the Date bg Section
+
+04. Story Page
+    04.1. Story Page Slider
+    04.2. Love Story Section
+
+05. Wedding Page
+    05.1. Wedding Page Slider
+    05.2. Wedding Page Countdown
+
+06. Gallery Page
+    06.1. Gallery Page Slider
+    06.2. Gallery Section
+
+07. Gift Page
+    07.1. Gift Registry Page Slider
+    07.2. Gift Registry Section
+
+08. RSVP Page
+    08.1. RSVP Page Slider
+    08.2. RSVP Section
+
+---------------------------------------------------------------- */
+
+/*=========================== START - 01. Theme Main Resoursce ===========================*/
+
+    /*---------------------------- START - 01.1. Google Fonts ----------------------------*/
+    @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&display=swap');
+    /*---------------------------- END - 01.1. Google Fonts ----------------------------*/
+
+    /*---------------------------- START - 01.2. Theme Reset Style ----------------------------*/
+    :root {
+        --primary-color: #7d9ead;
+        --seccondary-color: #696969;
+    }
+
+    body{
+        color: var(--seccondary-color);
+    }
+
+    ::-moz-selection {
+        color: white;
+        background: var(--primary-color);
+    }
+    
+    ::selection {
+        color: white;
+        background: var(--primary-color);
+    }
+
+    .border-top-left-radius{
+        border-top-left-radius: 17% !important;
+    }
+
+    .border-bottom-right-radius{
+        border-bottom-right-radius: 17% !important;
+    }
+
+    .border-top-right-radius{
+        border-top-right-radius: 17% !important;
+    }
+
+    .border-bottom-left-radius{
+        border-bottom-left-radius: 17% !important;
+    }
+
+    .form-control:focus{
+        color:#212529;
+        background-color:#fff;
+        border-color:var(--primary-color);
+        outline:0;
+        box-shadow:0 0 0 .25rem #7d9ead75;
+    }
+
+    .all-bg-header{
+        font-size: 100px;
+        font-family: 'Great Vibes', cursive;
+    }
+
+    .lg-none{
+        display: none;
+    }
+    
+    .lg-visible{
+        display: block;
+    }
+
+    .btn-danger{
+        box-shadow: none !important;
+        border-top-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+        border: 1px solid var(--primary-color) !important;
+        background-color: var(--primary-color) !important;
+    }
+
+    .btn-danger:hover {
+        color: var(--primary-color) !important;
+        background-color: transparent !important;
+        border: 1px solid var(--primary-color) !important;
+    }
+
+    .btn-danger-outline{
+        color: var(--primary-color) !important;
+        box-shadow: none !important;
+        border-top-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+        background-color: white !important;
+        border: 1px solid var(--primary-color) !important;
+    }
+
+    .btn-danger-outline:hover {
+        color: white !important;
+        border: 1px solid var(--primary-color) !important;
+        background-color: var(--primary-color) !important;
+    }
+
+    .padding-container{
+        padding-top: 75px;
+    }
+
+    .container-adj{
+        padding-left: 15%;
+        padding-right: 15%;
+    }
+
+    .friends-container{
+        padding-left: 12%;
+        padding-right: 12%;
+    }
+
+    @media screen and (min-width: 1900px) {
+        .container-adj{
+            padding-left: 25%;
+            padding-right: 25%;
+        }
+
+        .friends-container{
+            padding-left: 22%;
+            padding-right: 22%;
+        }
+    }
+
+    .all-title{
+        font-size: 55px;
+        font-weight: 800;
+        color: #3e3e3e;
+        text-align: center;
+        letter-spacing: 2px;
+        font-family: 'Great Vibes', cursive;
+    }
+
+    .all-subtitle{
+        font-size: 14px;
+        color: #adadad;
+        text-align: center;
+        padding-bottom: 3%;
+    }
+
+    .social-icon-ul .social-icon-li{
+        position: relative;
+        display: inline-block;
+        list-style: none;
+        margin: 0 7px;
+    }
+    .social-icon-ul .social-icon-li .social-icon-link{
+        position: relative;
+        display: inline-block;
+        width: 30px;  height: 30px;
+        background: #fff;
+        box-shadow: 0 0 0 2px var(--primary-color);
+        border-top-right-radius: 7px;
+        border-bottom-left-radius: 7px;
+        font-size: 10px;
+        overflow: hidden;
+    }
+    .social-icon-ul .social-icon-li .social-icon-link .box{
+        position: absolute;
+        top: 0;   left: 0;
+        width: 100%;   height: 200%; 
+    }
+    .social-icon-ul .social-icon-li .social-icon-link .box span{
+        position: relative;
+        display: block;
+        width: 100%;
+        height: 50%;
+        line-height: 35px;
+        transition: .5s;
+    }
+
+    /************** span of box 1 **************/
+    .social-icon-ul .social-icon-li .social-icon-link .box:nth-child(1) span{
+        transform: translateY(0);
+    }
+    .social-icon-ul .social-icon-li .social-icon-link .box:nth-child(1) span:nth-child(1){
+        background: #fff;
+    }
+    .social-icon-ul .social-icon-li .social-icon-link .box:nth-child(1) span:nth-child(2){
+        background: var(--primary-color);
+    }
+
+    .social-icon-ul .social-icon-li:hover .social-icon-link .box:nth-child(1) span{
+        transform: translateY(-100%);
+    }
+    /************** span of box 2 **************/
+    .social-icon-ul .social-icon-li .social-icon-link .box:nth-child(2) span{
+        transform: translateY(-100%);
+    }
+    .social-icon-ul .social-icon-li .social-icon-link .box:nth-child(2) span{
+        color: var(--primary-color);
+    }
+    .social-icon-ul .social-icon-li:hover .social-icon-link .box:nth-child(2) span{
+        color: #fff;
+    }
+    .social-icon-ul .social-icon-li:hover .social-icon-link .box:nth-child(2) span{
+        transform: translateY(0);
+    }
+    /*---------------------------- END - 01.2. Theme Reset Style ----------------------------*/
+
+
+
+    /*---------------------------- START - 01.3. Header ----------------------------*/
+    .header{
+        transition: 0.3s;
+    }
+
+    .logo{
+        width: 180px;
+    }
+
+    .header-link{
+        padding: 10px;
+        transition: .2s;
+        font-size: 14px;
+        font-weight: 600;
+        border-radius: 5px;
+        margin-left: 20px;
+        letter-spacing: 2px;
+        text-decoration: none !important;
+        text-transform: uppercase;
+        cursor: pointer !important;
+        border: 1.5px solid transparent;
+    }
+
+    .header-link:hover{
+        transition: .2s;
+        border: 1.5px solid white;
+    }
+
+    .header-link-active{
+        border: 1.5px solid white;
+    }
+    /*---------------------------- END - 01.3. Header ----------------------------*/
+
+    /*---------------------------- START - 01.4. Main Footer ----------------------------*/
+    .footer{
+        padding: 5% 0 5% 0;
+        box-shadow: 0px -9px 20px 0px #ebebeb;
+    }
+    
+    .footer-code{
+        font-size: 15px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+    }
+    
+    .footer-logo{
+        font-size: 30px;
+        color: black !important;
+        text-decoration: none !important;
+    }
+    
+    .footer-description{
+        font-size: 13px;
+        color: #696969;
+        margin-top: 8px;
+    }
+    
+    .footer-links-title{
+        color: black;
+    }
+    
+    .footer-link{
+        font-size: 14px;
+        transition: .5s;
+        color: #696969;
+        text-decoration: none;
+    }
+    
+    
+    .footer-link:hover{
+        transition: .5s;
+        color: var(--primary-color);
+        text-decoration: underline;
+    }
+    
+    .footer-link-li{
+        margin-top: 3%;
+        list-style: none;
+    }
+    
+    .footer-link-ul{
+        padding: 0 !important;
+    }
+    
+    .footer-social-icons{
+        margin-left: -12%;
+    }
+
+    .footer-p{
+        padding-top: 3rem!important;
+        margin-bottom: 0 !important;
+        margin-top: 0.5rem!important;
+        text-align: center!important;
+    }
+    /*---------------------------- END - 01.4. Main Footer ----------------------------*/
+
+    /*---------------------------- START - 01.5. Image Footer ----------------------------*/
+    .footer-main{
+        overflow: hidden;
+    }
+    
+    .footer-background{
+        width: 100%;
+        height: 100%;
+        position: relative;
+        background-size: cover;
+        background-repeat: repeat;
+        background-attachment: fixed;
+        background-position: center center;
+        background-image: url("../images/footer/01.jpg");
+    }
+    
+    .footer-bg-overlay{
+        width: 100%;
+        height: 100%;
+        color: white;
+        padding: 10% 0 10% 0;
+        background-size: cover;
+        background-position: center center;
+        background-color: #000000b5 !important;
+    }
+    /*---------------------------- END - 01.5. Image Footer ----------------------------*/
+
+    /*---------------------------- START - 01.6. Back to top button ----------------------------*/
+    .back-to-top {
+        right:25px;
+        bottom:25px;
+        display:none;
+        cursor:pointer;
+        position:fixed;
+        color: white;
+        border: none;
+        background-color: rgba(134, 160, 182, 0.7);
+        border-radius:50% !important;
+        padding: 13px 18px 13px 18px !important;
+    }
+    
+    .back-to-top:hover{
+        color:white !important;
+        border-color:var(--primary-color) !important;
+        background-color:var(--primary-color) !important;
+    }
+    
+    .back-to-top:focus{
+        box-shadow:none !important;
+    }
+    /*---------------------------- END - 01.6. Back to top button ----------------------------*/
+    
+    /*---------------------------- START - 01.7. Tablet Responsive ----------------------------*/
+    @media only screen and (max-width:820px) and (max-width:820px) {
+        .all-title{
+            font-size: 40px !important;
+        }
+
+        .logo{
+            width: 150px;
+        }
+    
+        .sm-mt-2{
+            margin-top: 15% !important;
+        }
+    
+        .footer-p{
+            padding-top: 1rem!important;
+            margin-top: 0.5rem!important;
+            text-align: center!important;
+        }
+    
+        .couples-row{
+            padding: 1rem!important;
+        }
+    
+        .gift-bg{
+            padding-bottom: 15%;
+        }
+    
+        .gift-registry-title{
+            padding-top: 15%;
+        }
+        
+        .slider-code{
+            font-size: 15px;
+            padding-top: 30% !important;
+        }
+    
+        .slider-name{
+            padding-top: 4%;
+            padding-bottom: 5%;
+            font-size: 5rem;
+        }
+    
+        #countdown{
+            margin-top: 5%;
+        }
+    
+        .couples-img{
+            width: 600px;
+            height: 500px;
+            color: #fff;
+        }
+    
+        .sm-visible{
+            display: block;
+        }
+    
+        .sm-none{
+            display: none;
+        }
+    
+        .timeline-center-line{
+            display: none;
+        }
+    
+        .timeline-center-date{
+            width: 75px;
+            height: 75px;
+            font-size: 13px;
+            margin-top: -50%;
+            margin-left: 225px !important;
+        }
+    
+        .timeline-title{
+            padding-top: 20px;
+        }
+    
+        .groom-bride-friends-card{
+            margin-top: 15% !important;
+        }
+    
+        .uk-subnav {
+            font-size: 15px;
+            margin-left: 18% !important;
+        }
+    
+        .rsvp-overlay{
+            padding: 25% 0 25% 0;
+        }
+    
+        .footer-social-icons {
+            margin-left: -5%;
+        }
+    
+        .carousel-control-prev {
+            margin-top: 70%;
+            margin-left: 5%;
+            width: 50px !important;
+            height: 50px !important;
+        }
+    
+        .carousel-control-next {
+            margin-top: 70%;
+            margin-left: 5%;
+            width: 50px !important;
+            height: 50px !important;
+        }
+    
+        .slider-down-icon-btn i{
+            font-size: 18px !important;
+        }
+    
+        .navbar-collapse{
+            padding: 30px 25px 20px 15px !important;
+            background-color: #faf8f8 !important;
+        }
+    
+        .header-link{
+            padding-left: 20px !important;
+            color: black !important;
+        }
+    
+        .header .navbar-toggler {
+            border: none !important;
+            box-shadow: none !important;
+        }
+    
+        .navbar-toggler{
+            font-size: 25px;
+        }
+        
+        .header-link-active{
+            border: 1px solid black !important;
+        }
+    
+        .all-bg-header{
+            font-size: 70px;
+            padding-top: 10%;
+            font-family: 'Great Vibes', cursive;
+        }
+
+        .groom-overlay{
+            height: 500px;
+        }
+    
+        .bride-overlay{
+            height: 500px;
+        }
+    
+        .gift-registry-title{
+            padding-top: 15%;
+        }
+    }
+    /*---------------------------- END - 01.7. Tablet Responsive ----------------------------*/
+
+    /*---------------------------- START - 01.8. Mobile Responsive ----------------------------*/
+    @media only screen and (max-width: 600px) {
+    
+        .footer-p{
+            padding-top: 1rem!important;
+            margin-top: 0.5rem!important;
+            text-align: center!important;
+        }
+    
+        #rsvpSection{
+            margin-top: 25px;
+            margin-bottom: 25px;
+        }
+    
+        .couples-row{
+            padding: .1rem!important;
+        }
+    
+        .gift-bg{
+            padding-bottom: 15%;
+        }
+    
+        .sm-mt-2{
+            margin-top: 15% !important;
+        }
+    
+        .gift-registry-title{
+            padding-top: 15%;
+        }
+    
+        .rsvp-card{
+            padding: 35px;
+        }
+    
+        .uk-subnav>*{
+            padding-left: 5px !important;
+        }
+    
+        #smSliderCoupleName span{
+            font-size: 50px;
+        }
+    
+        .couples-img{
+            width: 100%;
+            height: 100%;
+            color: #fff;
+        }
+    
+        .footer-social-icons {
+            margin-left: -9%;
+        }
+    
+        .timer2 {
+            padding: 1em;
+            font-size: 10px;
+        }
+    
+        .timer2 span {
+            font-size: 25px;
+        }
+    
+        .back-to-top {
+            padding: 10px 15px 10px 15px !important;
+        }
+    
+        .padding-container-sm-none{
+            padding-top: 0 !important;
+        }
+    
+        .sm-none{
+            display: none;
+        }
+        
+        .sm-visible{
+            display: block;
+        }
+    
+        .groom-overlay{
+            height: 500px;
+        }
+    
+        .bride-overlay{
+            height: 500px;
+        }
+    
+        .couples-overlay-name{
+            font-size: 40px !important;
+        }
+    
+        .header-link {
+            margin-top: 20px;
+            padding-left: 15px !important;
+            margin-right: 25px !important;
+        }
+    
+        .tabs-button {
+            padding: 13px 25px 13px 25px;
+        }
+    
+        .carousel-item{
+            height: 100vh !important;
+        }
+    
+        .slider-code{
+            font-size: 10px;
+            padding-top: 50% !important;
+        }
+    
+        .slider-name{
+            padding-top: 7%;
+            font-size: 3.05rem;
+        }
+    
+        #countdown{
+            margin-top: 10%;
+        }
+    
+        .slider-down-icon-btn{
+            padding: 15px 15px 10px 15px !important;
+        }
+    
+        .slider-down-icon-btn i{
+            font-size: 18px !important;
+        }
+    
+        .slider-down-icon{
+            padding-top: 15%;
+        }
+    
+        .all-title{
+            font-size: 40px !important;
+        }
+    
+        .all-subtitle{
+            font-size: 13px;
+        }
+    
+        .padding-container{
+            padding-top: 75px;
+        }
+    
+        .card-title{
+            font-size: 20px;
+        }
+    
+        .couples-card-description{
+            font-size: 14px;
+        }
+    
+        .container-adj{
+            padding-left: 5%;
+            padding-right: 5%;
+        }
+    
+        .timeline-center-line{
+            display: none;
+        }
+    
+        .timeline-title{
+            padding-top: 20px;
+        }
+    
+        .timeline-panel{
+            text-align: center !important;
+        }
+    
+        .timeline-center-date{
+            margin-top: -15%;
+            width: 65px;
+            height: 65px;
+            font-size: 12px;
+            margin-left: 38% !important;
+        }
+    
+        .timeline-center-last-date{
+            display: none;
+        }
+    
+        .time-line-bottom{
+            display: none;
+        }
+    
+        .couples-animation{
+            padding: 0 5% 0 5% !important;
+        }
+    
+        .bride-main{
+            height: 300px;
+        }
+    
+        .uk-subnav {
+            font-size: 12px;
+            margin-left: 0% !important;
+        }
+    
+        .gallery-title{
+            font-size: 12px !important;
+        }
+    
+        .rsvp-card:before, .rsvp-card:after {
+            display: none !important;
+        }
+    
+        .carousel-control-prev{
+            display: none;
+        }
+        
+        .carousel-control-next{
+            display: none;
+        }
+    
+        .card-title {
+            font-size: 35px;
+            margin-top: 1.5rem !important;
+            margin-bottom: 0 !important;
+        }
+    
+        .navbar-collapse{
+            background-color: #faf8f8 !important;
+        }
+    
+        .header-link{
+            color: black !important;
+        }
+    
+        .header .navbar-toggler {
+            border: none !important;
+            box-shadow: none !important;
+        }
+    
+        .navbar-toggler{
+            font-size: 25px;
+        }
+        
+        .header-link-active{
+            border: 1px solid black !important;
+        }
+    
+        .first-count h5{
+            font-size: 25px;
+        }
+        
+        .first-count h1{
+            font-size: 75px;
+        }
+    
+        .secont-count{
+            padding-left: 0;
+        }
+    
+        .all-bg-header{
+            font-size: 50px;
+            padding-top: 10%;
+            font-family: 'Great Vibes', cursive;
+        }
+    
+        .countdown-div{
+            width: 65px;
+            height: 65px;
+        }
+    
+        .timer{
+            line-height: 2;
+            font-size: 11px !important;
+        }
+    
+        .timer-span{
+            font-size: 20px !important;
+        }
+    
+        .last-timeline{
+            font-size: 12px;
+            margin-top: 0 !important;
+            padding-top: 15px !important;
+        }
+    
+        .gift-bg{
+            background-position: right;
+        }
+        
+        .gift-registry-icon{
+            font-size: 40px;
+            color: var(--primary-color) !important;
+        }
+        
+        .gift-registry-card-title{
+            font-size: 15px;
+        }
+        
+        .gift-img{
+            transition: transform .2s;
+        }
+        
+        .gift-registry-btn{
+            padding: 15px 30px 15px 30px;
+        }
+    
+        .groom-bride-friends-card{
+            margin-top: 15% !important;
+        }
+        
+        .groom-bride-friends-right-card{
+            margin-top: 15% !important;
+        }
+    
+        .weare-getting-married{
+            margin-top: -22%;
+        }
+    
+        .wedding-events-sm{
+            text-align: center!important;
+        }
+    
+        .card-title-sm{
+            padding-top: 5%;
+        }
+    
+        .friends-container{
+            padding-left: 12%;
+            padding-right: 12%;
+        }
+    
+        .footer{
+            padding-left: 20px;
+        }
+    }
+    /*---------------------------- END - 01.8. Mobile Responsive ----------------------------*/
+
+/*=========================== END - 01. Theme Main Resoursce ===========================*/
+
+
+
+/*=========================== END - 02. Home Page & Wedding Page Common File ===========================*/
+    
+    /*---------------------------- START - 02.1. Couples Section ----------------------------*/
+    .couples-img{
+        height: 100%;
+        color: #fff;
+    }
+
+    .couples-row{
+        padding: 3rem!important;
+    }
+
+    .groom-main{
+        width: 100%;
+        background-size: cover;
+        background-position: center;
+        background-image: url("../images/groom-bride/01.jpeg");
+    }
+
+    .bride-main{
+        width: 100%;
+        border-radius: 1% 50%;
+        background-size: cover;
+        background-position: center;
+        background-image: url("../images/groom-bride/02.jpeg");
+    }
+
+    .groom-overlay{
+        opacity: 0;
+        width: 650px;
+        height: 600px;
+        text-align: center;
+        display: table-cell;
+        transition: all 0.5s;
+        background-size: cover;
+        vertical-align: middle;
+        background-color: rgba(0, 0, 0, 0.539);
+    }
+    
+    .bride-overlay{
+        opacity: 0;
+        width: 650px;
+        height: 600px;
+        text-align: center;
+        display: table-cell;
+        transition: all 0.5s;
+        background-size: cover;
+        vertical-align: middle;
+        background-color: rgba(0, 0, 0, 0.539);
+    }
+
+    .bride-col, .groom-col {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .bride-row:hover >.col-12 .couples-img .bride-overlay{
+        opacity: 1;
+    }
+
+    .groom-row:hover >.col-12 .couples-img .groom-overlay{
+        opacity: 1;
+    }
+
+    .groom-row{
+        background-color: #ffff;
+    }
+
+    .bride-row{
+        background-color: #ffff;
+    }
+
+    .card-title{
+        font-size: 35px;
+        font-family: 'Great Vibes', cursive;
+    }
+
+    .couples-overlay-name{
+        font-size: 60px;
+        line-height: .9;
+        font-family: 'Great Vibes', cursive;
+    }
+
+    .couples-card {
+        border: none !important;
+    }
+
+    .couples-card-description{
+        line-height: 2;
+        font-size: 16px;
+    }
+    .couples-sign{
+        font-family: 'Great Vibes', cursive;
+    }
+
+    .card-social-icon{
+    font-size: 15px !important;
+    }
+
+    .card-social-icon-ul{
+        margin-left: -10%;
+    }
+    /*---------------------------- END - 02.1. Couples Section ----------------------------*/
+
+    /*---------------------------- START - 02.2. Groomsmen & Bridesmaid Section ----------------------------*/
+    .friends-card-custom{
+        height: 100%;
+    }
+
+    .friends-card-row .card{
+        padding-bottom: 10%;
+    }
+    
+    .groom-bride-friends-bg{
+        background-color: #f0f0f0 !important;
+    }
+    
+    .groom-bride-friends-card{
+        border: none !important;
+        background-color: white !important;
+    }
+    
+    .groom-bride-friends-card-footer{
+        border: none !important;
+        background-color: white !important;
+    }
+    
+    .groom-bride-friends-card-body{
+        padding: 0;
+    }
+    
+    .groom-bride-friends-card-footer-title{
+        font-size: 18px;
+        color: #151515;
+        font-weight: 600;
+        padding-top: 15%;
+        padding-bottom: 5%;
+    }
+    
+    .groom-bride-friends-card-footer-subtitle{
+        font-size: 13px;
+        font-weight: 400;
+        transition: all .1S;
+        color: rgb(98, 98, 98);
+    }
+    
+    .social-list {
+        position: absolute;
+        left: -5%;
+        bottom: 30%;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: flex-end;
+        flex-direction: column;
+        z-index: 1;
+        opacity: 0;
+        text-align: center;
+        transition: all .5s;
+        top: 0 !important;
+    }
+    
+    .groom-bride-friends-card:hover > .groom-bride-friends-card-body .social-list{
+        opacity: 1;
+    }
+    
+    .groom-bride-friends-right-card:hover > .groom-bride-friends-right-card-body .social-list{
+        opacity: 1;
+    }
+    
+    .groom-bride-friends-card:hover > .groom-bride-friends-card-footer .groom-bride-friends-card-footer-subtitle{
+        visibility: hidden !important;
+    }
+    
+    .groom-bride-friends-right-card:hover > .groom-bride-friends-card-footer .groom-bride-friends-card-footer-subtitle{
+        visibility: hidden !important;
+    }
+    
+    .social-list ul {
+        display: flex;
+        justify-content: center;
+        z-index: 1;
+        list-style: none;
+    }
+    
+    .attending-bg-container{
+        background-color: #f0f0f0 !important;
+    }
+    
+    .social-list ul li {
+        margin: 5px;
+        z-index: -1;
+        cursor: pointer;
+        transition: all .3s;
+        background: var(--primary-color);
+        padding: 8px 13px 8px 13px;
+        border-top-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+    }
+    
+    .social-list ul li a {
+        color: #fff;
+        transition: all .3s;
+    }
+    /*---------------------------- START - 02.2. Groomsmen & Bridesmaid Section ----------------------------*/
+
+/*=========================== END - 02. Home Page & Wedding Page Common File ===========================*/
+
+/*=========================== START - 03. Home Page ===========================*/
+
+    /*---------------------------- START - 03.1. Slider ----------------------------*/
+    .slider{
+        width: 100%;
+        height: 100vh;
+        background-size: cover;
+        background-position: center center;
+    }
+
+    .slider-overlay{
+        width: 100%;
+        height: 100vh;
+        padding-top: 20%;
+        text-align: center;
+        color: white !important;
+        background-color: rgba(0, 0, 0, 0.558);
+        font-family: 'Josefin Sans', sans-serif;
+    }
+
+    .slider-1{
+        background-image: url("../images/sliders/01.jpg");
+    }
+
+    .slider-2{
+        background-image: url("../images/sliders/02.jpg");
+    }
+
+    .slider-3{
+        background-image: url("../images/sliders/03.jpg");
+    }
+
+    .slider-name{
+        font-size: 130px;
+        margin-bottom: 0;
+        font-family: 'Great Vibes', cursive;
+    }
+
+    .slider-code {
+        font-size: 15px;
+        letter-spacing: 10px;
+    }
+
+    .carousel-control-prev{
+        margin-top: 25%;
+        margin-left: 5%;
+        border-radius: 100%;
+        opacity: 1 !important;
+        width: 60px !important;
+        height: 60px !important;
+        border: 2px solid white !important;
+        background-color: #ffffff42 !important;
+    }
+
+    .carousel-control-next{
+        margin-top: 25%;
+        margin-right: 5%;
+        border-radius: 100%;
+        opacity: 1 !important;
+        width: 60px !important;
+        height: 60px !important;
+        border: 2px solid white !important;
+        background-color: #ffffff42 !important;
+    }
+
+    .slider-down-icon{
+        font-size: 25px;
+        transition: .3s;
+        cursor: pointer;
+        margin-top: 5%;
+    }
+
+    .slider-down-icon-btn{
+        transition: .3s;
+        border-radius: 100px;
+        cursor: pointer !important;
+        color: var(--primary-color) !important;
+        padding: 20px 20px 15px 20px;
+        background-color: white !important;
+    }
+
+    .slider-down-icon-btn:hover{
+        transition: .3s;
+        color: white !important;
+        background-color: var(--primary-color) !important;
+    }
+
+    .slider-down-icon-btn i{
+        font-size: 17px;
+    }
+    /*---------------------------- END - 03.1. Slider ----------------------------*/
+
+    /*---------------------------- START - 03.2. Save the Date bg Section ----------------------------*/
+    .save-date-bg{
+        width: 100%;
+        height: 100%;
+        color: #fff;
+        background-size: cover;
+        background-attachment: fixed;
+        background-image: url("../images/save-the-date/01.jpg")
+    }
+    
+    .save-date-bg-overlay{
+        width: 100%;
+        height: 100%;
+        padding: 5% 0 5% 0;
+        background-size: cover;
+        opacity: .8;
+        background-color: #3d5963;
+    }
+
+    .save-date-bg-overlay h2{
+        font-size: 50px;
+        font-family: 'Great Vibes', cursive;
+    }
+    
+    .save-date-bg-overlay h1{
+        font-size: 60px;
+        letter-spacing: 5px;
+    }
+    
+    .save-date-bg-overlay p{
+        font-size: 17px;
+        letter-spacing: 10px;
+    }
+    /*---------------------------- END - 03.2. Save the Date bg Section ----------------------------*/
+
+/*=========================== END - 03. Home Page ===========================*/
+
+/*=========================== START - 04. Story Page ===========================*/
+
+    /*---------------------------- START - 04.1. Story Page Slider ----------------------------*/
+    .story-main-bg{
+        width: 100%;
+        height: 100%;
+        color: #fff;
+        background-size: cover;
+        background-attachment: fixed;
+        background-position: center center;
+        background-image: url("../images/timeline/01.jpg");
+    }
+
+    .story-main-bg-overlay{
+        width: 100%;
+        height: 100%;
+        color: #fff;
+        padding: 10% 0 10% 0;
+        opacity: .8;
+        background-color: #3d5963;
+    }
+    /*---------------------------- END - 04.1. Story Page Slider ----------------------------*/
+
+    /*---------------------------- START - 04.2. Love Story Section ----------------------------*/
+    .story-row{
+        padding-top: 20px;
+        text-align: left !important;
+    }
+
+    .timeline-panel img{
+        transition: all .3s;
+    }
+
+    .timeline-panel img:hover{
+        border-top-right-radius: 17% !important;
+        border-bottom-left-radius: 17% !important;
+
+        border-top-left-radius: 0px !important;
+        border-bottom-right-radius: 0px !important;
+    }
+
+    .timeline-title{
+        font-size: 30px;
+        font-weight: 600;
+        padding-top: 100px;
+        letter-spacing: 2px;
+        font-family: 'Great Vibes', cursive;
+    }
+
+    .timeline-date{
+        font-size: 15px;
+        color: var(--primary-color);
+        padding-top: 5px;
+        margin-bottom: 0;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+    }
+
+    .timeline-description{
+        font-size: 14px;
+        color: #7c7c7c;
+        padding-top: 10px;
+        text-align: justify;
+    }
+
+    .timeline-center-line{
+        height: 100%;
+        margin-left: 50%;
+        border-left: 1px solid #cbcaca;
+    }
+
+    .timeline-center-date{
+        width: 65px;
+        height: 65px;
+        font-size: 11px;
+        color: white;
+        margin: 0 auto;
+        padding-top: 17px;
+        text-align: center;
+        position: relative;
+        background-color: var(--primary-color);
+    }
+
+    .time-line-bottom{
+        letter-spacing: 3px;
+        padding-top: 50px;
+        margin-bottom: 0 !important;
+    }
+    /*---------------------------- END - 04.2. Love Story Section ----------------------------*/
+
+/*=========================== END - 04. Story Page ===========================*/
+
+
+
+/*=========================== START - 05. Wedding Page ===========================*/
+
+    /*---------------------------- START - 05.1. Wedding Page Slider ----------------------------*/
+    .wedding-main-bg{
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-attachment: fixed;
+        background-position: center center;
+        background-image: url("../images/sliders/01.jpg")
+    }
+
+    .wedding-main-bg-overlay{
+        width: 100%;
+        height: 100%;
+        padding: 7% 0 7% 0;
+        background-size: cover;
+        opacity: .8;
+        color: white !important;
+        background-color: #3d5963;
+    }
+    /*---------------------------- END - 05.1. Wedding Page Slider ----------------------------*/
+
+    /*---------------------------- START - 05.2. Wedding Page Countdown ----------------------------*/
+    .countdown-bg{
+        width: 100%;
+        height: 100%;
+        color: #fff;
+        background-size: cover;
+        background-attachment: fixed;
+        background-image: url("../images/sliders/02.jpg");
+    }
+    
+    .countdownbg-overlay{
+        width: 100%;
+        height: 100%;
+        color: #fff;
+        padding: 5% 0 5% 0;
+        opacity: .8;
+        background-color: #3d5963;
+    }
+    
+    .first-count{
+        font-family: 'Great Vibes', cursive;
+    }
+    
+    .first-count h5{
+        font-size: 30px;
+    }
+    
+    .first-count h1{
+        font-size: 100px;
+    }
+    
+    .timer2 {
+        padding: 3em;
+        font-size: 18px;
+        list-style-type: none;
+        display: inline-block;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-family: 'Montserrat', sans-serif !important;
+    }
+      
+    .timer2 span {
+        display: block;
+        font-size: 3.5rem;
+    }
+    
+    .timer {
+        color:white;
+        font-size:1em;
+        font-weight:700;
+        text-align:center;
+        display:inline-block;
+        list-style-type:none;
+        text-transform:uppercase;
+    }
+      
+    .timer .timer-span {
+        display:block;
+        font-size:2rem;
+        font-weight:700;
+        text-align:center;
+        margin-bottom:-10px !important;
+        font-family: var(--mdb-body-font-family) !important;
+    }
+    
+    .time-container, .time-container-lg, .time-container-md, .time-container-sm, .time-container-xl, .time-container-xxl{
+        max-width: fit-content;
+    }
+    
+    .countdown-div {
+        position: relative;
+        width: 110px;
+        height: 110px;
+        border:2px solid white;
+        background-color:transparent;
+        display: flex ; 
+        justify-content: center; 
+        align-items: center;
+        margin-left: 25px !important;
+        transition: 0.5s;
+    }
+    /*---------------------------- END - 05.2. Wedding Page Countdown ----------------------------*/
+    
+/*=========================== END - 05. Wedding Page ===========================*/
+
+
+
+/*=========================== START - 06. Gallery Page ===========================*/
+
+    /*---------------------------- START - 06.1. Gallery Page Slider ----------------------------*/
+    .gallery-main-bg{
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-attachment: fixed;
+        background-position: center center;
+        background-image: url("../images/gallery/01.jpg")
+    }
+
+    .gallery-main-bg-overlay{
+        width: 100%;
+        height: 100%;
+        padding: 7% 0 7% 0;
+        background-size: cover;
+        opacity: .8;
+        color: white !important;
+        background-color: #3d5963;
+    }
+    /*---------------------------- END - 06.1. Gallery Page Slider ----------------------------*/
+
+    /*---------------------------- START - 06.2. Gallery Section ----------------------------*/
+    .uk-section{
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+    }
+    
+    .uk-lightbox.uk-open{
+        z-index: 100000000;
+    }
+    
+    .uk-subnav>*>:first-child{
+        font-weight: 500;
+        color: rgb(138, 138, 138);
+        display: block;
+        text-transform: capitalize;
+        border: 1px solid var(--primary-color);
+        padding: 10px 15px !important;
+        border-top-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+    }
+    
+    .uk-subnav-pill>.uk-active>a{
+        border: 1px solid var(--primary-color) !important;
+        background-color: var(--primary-color) !important;
+    }
+    
+    .uk-subnav{
+        padding-bottom: 4% !important;
+        margin-left: 33% !important;
+    }
+    
+    .gallery-img{
+        transition: all .5s;
+    }
+    
+    .gallery-img:hover{
+        opacity: .2;
+    }
+    
+    .gallery-icon{
+        font-size: 40px;
+        color: transparent;
+        position: absolute;
+        margin-top: 8%;
+        margin-left: 7.5%;
+    }
+    
+    .gallery-main:hover > .gallery-icon{
+        color: black;
+    }
+    /*---------------------------- END - 06.2. Gallery Section ----------------------------*/
+
+/*=========================== END - 06. Gallery Page ===========================*/
+
+
+
+/*=========================== START - 07. Gift Page ===========================*/
+
+    /*---------------------------- START - 07.1. Gift Registry Page Slider ----------------------------*/
+    .gift-main-bg{
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-attachment: fixed;
+        background-position: center center;
+        background-image: url("../images/gift/01.jpg")
+    }
+
+    .gift-main-bg-overlay{
+        width: 100%;
+        height: 100%;
+        padding: 7% 0 7% 0;
+        background-size: cover;
+        opacity: .8;
+        color: white !important;
+        background-color: #3d5963;
+    }
+    /*---------------------------- END - 07.1. Gift Registry Page Slider ----------------------------*/
+
+    /*---------------------------- START - 07.2. Gift Registry Section ----------------------------*/
+    .gift-bg{
+        width: 100%;
+        height: 100%;
+        padding-bottom: 80px;
+        background-size: cover;
+        background-attachment: fixed;
+        background-image: url("../images/gift/02.jpg")
+    }
+
+    .gift-registry-title{
+        padding-top: 80px;
+        font-size: 80px;
+        color: #000000 !important;
+    }
+
+    .gift-card{
+        border: none;
+        border-top-left-radius: 90px;
+        border-bottom-right-radius: 90px;
+        background-color: white;
+        padding: 40px 15px 40px 25px;
+        box-shadow: 0 0 10px 15px #f1f1f1;
+    }
+    
+    .gift-registry-icon{
+        font-size: 65px;
+        color: var(--primary-color) !important;
+    }
+    
+    .gift-registry-card-title{
+        font-size: 25px;
+        font-weight: 600;
+        padding-top: 15px;
+        line-height: 1.5;
+        text-transform: uppercase;
+        color: var(--primary-color) !important;
+        font-family: 'Montserrat' !important;
+    }
+    
+    .gift-img{
+        transition: transform .2s;
+    }
+    
+    .gift-img:hover{
+        transform: scale(1.2);
+    }
+    
+    .gift-registry-btn{
+        padding: 15px 30px 15px 30px;
+    }
+    /*---------------------------- END - 07.2. Gift Registry Section ----------------------------*/
+
+/*=========================== END - 07. Gift Page ===========================*/
+
+
+
+/*=========================== START - 08. RSVP Page ===========================*/
+    /*---------------------------- START - 08.1. RSVP Page Slider ----------------------------*/
+    .rsvp-main-bg{
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-attachment: fixed;
+        background-position: center center;
+        background-image: url("../images/rsvp/01.jpg")
+    }
+    
+    .rsvp-main-bg-overlay{
+        width: 100%;
+        height: 100%;
+        padding: 7% 0 7% 0;
+        background-size: cover;
+        opacity: .8;
+        color: white !important;
+        background-color: #3d5963;
+    }
+    /*---------------------------- END - 08.1. RSVP Page Slider ----------------------------*/
+
+    /*---------------------------- START - 08.2. RSVP Section ----------------------------*/
+    .rsvp-form{
+        padding-top: 5%;
+    }
+    
+    .rsvp-card{
+        padding: 70px 100px 70px 100px;
+        position: relative;
+        opacity: 1 !important;
+        border-top-left-radius: 100px;
+        border-bottom-right-radius: 100px;
+        background: white !important;
+        box-shadow: 0 0 20px 0 #eaeaea;
+    }
+    
+    .rsvp-input{
+        width: 100%;
+        height: 50px;
+        color: #797979;
+        font-weight: 300;
+        padding: 6px 15px;
+        margin-bottom: 10%;
+        font-size: 0.93333rem;
+        outline: none !important;
+        border: 1px solid #edf3f5;
+        background-color: #fbfbfb;
+        box-shadow: none !important;
+        border-radius: 0 !important;
+    }
+    
+    .rsvp-card textarea{
+        height: 150px;
+    }
+    
+    .rsvp-btn{
+        padding: 15px 30px 15px 30px;
+    }
+    /*---------------------------- END - 08.2. RSVP Section ----------------------------*/
+/*=========================== END - 08. RSVP Page ===========================*/
